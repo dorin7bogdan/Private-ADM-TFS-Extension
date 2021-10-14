@@ -1,0 +1,101 @@
+{
+	"manifestVersion": 1,
+	"id": "Private-UFT-Azure-extension",
+	"name": "Private UFT One Azure DevOps extension",
+	"version": "1.0.0",
+	"publisher": "uftpublisher",
+	"targets": [{
+		"id": "Microsoft.VisualStudio.Services",
+		"version": "[15.0,)"
+	}],
+	"description": "Enables you to run UFT One tests as a build in an Azure DevOps build process. This extension includes 4 tasks.",
+	"categories": [
+		"Azure Pipelines"
+	],
+	"resources": [
+		"some stuff"
+	],
+	"tags": [
+		"UFT One",
+		"ALM",
+		"automated testing",
+		"Test task",
+		"GUI testing",
+		"API testing"
+	],
+	"icons": {
+		"default": "images/tfs.png"
+	},
+	"demands": ["contribution/ms.vss-dashboards-web.widget-sdk-version-2", "contribution/ms.vss-web.charts-service"],
+	"screenshots ": [{
+			"path": "resources/screenshots/AlmExecution.PNG"
+		},
+		{
+			"path": "resources/screenshots/screen2.png"
+		}
+	],
+	"links": {
+		"home": {
+			"uri": "https://github.com/MicroFocus/ADM-TFS-Extension/releases/tag/2.0.0"
+		},
+		"installation": {
+			"uri": "https://admhelp.microfocus.com/uft/en/latest/UFT_Help/Content/UFT_Tools/Azure_DevOps_Extension/uft-azure-devops.htm"
+		},
+		"learn": {
+			"uri": "https://admhelp.microfocus.com/uft/en/latest/UFT_Help/Content/UFT_Tools/Azure_DevOps_Extension/uft-azure-devops.htm"
+		},
+		"privacypolicy": {
+			"uri": "https://www.microfocus.com/about/legal/#your_privacy"
+		},
+		"support": {
+			"uri": "https://www.microfocus.com/en-us/support/"
+		}
+	},
+	"content": {
+		"details": {
+			"path": "README.md"
+		},
+		"overview": {
+			"path": "overview.md"
+		},
+		"license": {
+			"path": "LICENSE"
+		}
+	},
+	"branding": {
+		"color": "rgb(1, 66, 114)",
+		"theme": "dark"
+	},
+	"files": [{
+			"path": "AlmLabManagementTask"
+		},
+		{
+			"path": "node_modules/vss-web-extension-sdk/lib/VSS.SDK.js",
+			"addressable": true
+		},
+		{
+			"path": "images",
+			"addressable": true
+		}
+	],
+	"scopes": [
+		"vso.test",
+		"vso.build_execute",
+		"vso.serviceendpoint"
+	],
+
+	"contributions": [{
+			"id": "custom-build-task-1",
+			"type": "ms.vss-distributed-task.task",
+			"targets": [
+				"ms.vss-distributed-task.tasks"
+			],
+			"properties": {
+				"name": "AlmLabManagementTask"
+			}
+		}
+	],
+	"galleryFlags": [
+		"Private"
+	]
+}
